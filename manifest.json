@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "description": "__MSG_extDescription__",
+  "author": "Seiri",
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "check.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "icons": {
+    "128": "assets/static/icons/icon128.png",
+    "16": "assets/static/icons/icon16.png",
+    "32": "assets/static/icons/icon32.png",
+    "48": "assets/static/icons/icon48.png"
+ },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "assets/static/icons/icon128.png",
+      "16": "assets/static/icons/icon16.png",
+      "32": "assets/static/icons/icon32.png",
+      "48": "assets/static/icons/icon48.png"
+   }
+  }
+}
