@@ -1,18 +1,18 @@
-# Night Mode Shift プライバシーポリシー
+# Night Mode Shift Privacy pPolicy
 
-## 利用者情報の取得  
-  利用者情報の取得 当サイトが利用者の個人情報を取得することはありません。
+## Acquisition of user information
+  This site does not acquire the user's personal information.
 
-## 利用者情報の利用  
-  当サイトが利用者の個人情報を利用することはありません。
+## Use of user information
+  This site does not use the user's personal information.
 
-## 利用者情報の第三者提供  
-  当サイトが利用者の個人情報を第三者へ提供することはありません。
+## Third party provision of user information 
+  This site does not provide users' personal information to third parties.
 
-## 免責事項 
-  当サイト掲載されたコンテンツを利用したことによって生じた損害やトラブルについて、当サイトは一切の責任を負いません。  
-  当サイトは掲載されたコンテンツについて、常に正確かつ完全な情報を提供するように努めていますが、その正確性や完全性について保証するものではありません。
+## Disclaimer
+  This site is not responsible for any damage or trouble caused by using the content published in this site.
+  We are committed to providing accurate and complete information about the content of the site, but does not guarantee its accuracy or completeness.
 
-## 使用ツール  
-  当サイトでは、分析ツールとして Google Analytics(Google Inc.)を使用しており、Google Analytics が利用者の情報を自動取得する場合があります。
-  取得する情報、利用目的、第三者への提供等につきましては、分析事業者のプライバシーポリシーよりご確認ください。
+## Use tool
+  Google Analytics (Google Inc.) is used as an analysis tool, and Google Analytics may acquire the information of the user automatically.
+  For the information, the purpose of use, and the provision to the third party to obtain, please confirm from the analysis policy of the analysis business person.
