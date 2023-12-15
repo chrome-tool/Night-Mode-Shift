@@ -1,4 +1,4 @@
-# Night Mode Shift Privacy pPolicy
+# Night Mode Shift Privacy Policy
 
 ## Acquisition of user information
   This site does not acquire the user's personal information.
