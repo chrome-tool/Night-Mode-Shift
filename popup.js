@@ -35,6 +35,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     setOpacity(opacity.value);
     chrome.tabs.query({ currentWindow: true }, async function (tabs) {
       for (var tab of tabs) {
+        if (
+          !tab.url ||
+          tab?.url?.includes("chrome://") ||
+          tab?.url?.includes("chromewebstore.google.com")
+        ) {
+          continue;
+        }
         await chrome.scripting.executeScript({
           target: { tabId: tab.id, allFrames: true },
           function: function (darkModeVal, colorval, opacityVal) {
