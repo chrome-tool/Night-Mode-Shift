@@ -1,44 +1,30 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extName__",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "default_locale": "en",
   "description": "__MSG_extDescription__",
   "author": "Seiri",
-  "content_scripts": [
-    {
-      "all_frames": true,
-      "js": [
-        "check.js"
-      ],
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ]
-    }
-  ],
-  "host_permissions": [
-    "http://*/*",
-    "https://*/*"
-  ],
+  "background": {
+    "service_worker": "assets/js/background-wrapper.js"
+  },
   "permissions": [
     "storage",
-    "scripting",
-    "activeTab"
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "icons": {
-    "128": "assets/static/icons/icon128.png",
-    "16": "assets/static/icons/icon16.png",
-    "32": "assets/static/icons/icon32.png",
-    "48": "assets/static/icons/icon48.png"
- },
+    "128": "assets/icons/icon128.png",
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "128": "assets/static/icons/icon128.png",
-      "16": "assets/static/icons/icon16.png",
-      "32": "assets/static/icons/icon32.png",
-      "48": "assets/static/icons/icon48.png"
-   }
+      "128": "assets/icons/icon128.png"
+    }
   }
 }
