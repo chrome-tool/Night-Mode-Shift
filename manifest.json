@@ -20,20 +20,17 @@
   },
   "content_scripts": [
     {
-      "js": ["assets/js/loader.js"],
-      "matches": ["<all_urls>"],
+      "js": ["assets/js/content.js"],
+      "matches": ["\u003Call_urls>"],
       "run_at": "document_start"
     }
   ],
-  "permissions": ["storage", "scripting"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["\u003Call_urls>"],
   "web_accessible_resources": [
     {
-      "resources": [
-        "assets/js/content.js",
-        "assets/js/utils.js"
-      ],
-      "matches": ["<all_urls>"]
+      "resources": ["assets/js/*"],
+      "matches": ["\u003Call_urls>"]
     }
   ]
 }

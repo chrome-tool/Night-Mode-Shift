@@ -1,10 +1,10 @@
 import {
-  getDarkMode,
-  setDarkMode,
-  getColor,
   setColor,
-  getOpacity,
+  setDarkMode,
   setOpacity,
+  getDarkMode,
+  getOpacity,
+  getColor,
 } from "./utils.js";
 
 class Popup {
@@ -20,11 +20,18 @@ class Popup {
     const colorval = this.getSelectedColor()
       ? this.getSelectedColor()
       : "transparent";
-     setDarkMode(darkMode.checked);
-     setColor(colorval);
-     setOpacity(opacity.value);
-     chrome.runtime.sendMessage({
+    await setDarkMode(darkMode.checked);
+    await setColor(colorval);
+    await setOpacity(opacity.value);
+    const queryOptions = { active: true, currentWindow: true };
+    const [tab] = await chrome.tabs.query(queryOptions);
+    await chrome.tabs.sendMessage(tab.id, {
       action: "execute",
+      params: {
+        darkMode: darkMode.checked,
+        color: colorval,
+        opacity: opacity.value,
+      },
     });
   };
 
@@ -60,5 +67,5 @@ class Popup {
 
 document.addEventListener("DOMContentLoaded", async () => {
   const popup = new Popup();
-  popup.init();
+  await popup.init();
 });

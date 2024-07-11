@@ -23,7 +23,7 @@ export const createScreenCover = () => {
     screenCoverDiv = document.createElement("div");
     screenCoverDiv.id = "screen-cover";
     screenCoverDiv.style.cssText =
-      "transition: opacity 1s ease 0s;z-index: 999999999999;margin: 0;border-radius: 0;position: fixed;top: -10%;right: -10%;width: 120%;height: 120%;pointer-events: none;mix-blend-mode: multiply;display: none;";
+      "transition: opacity 1s ease 0s;z-index: 999999999999;margin: 0;border-radius: 0;position: fixed;top: -10%;right: -10%;width: 120%;height: 120%;pointer-events: none;mix-blend-mode: multiply;display: block;";
     const html = document.querySelector("html");
     html.insertBefore(screenCoverDiv, document.head);
   }
