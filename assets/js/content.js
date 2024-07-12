@@ -18,7 +18,6 @@ function setOpacity(opacity) {
 }
 
 chrome.runtime.onMessage.addListener((request, sender) => {
-  console.log(request);
   if (request.action === "execute") {
     const { darkMode, color, opacity } = request.params;
     setDarkMode(darkMode);
