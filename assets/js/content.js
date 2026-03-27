@@ -35,5 +35,14 @@ chrome.runtime.onMessage.addListener((request) => {
 });
 
 (function () {
-  execute(DEFAULTS);
+  chrome.storage.local.get(
+    ["darkMode", "darkmode", "color", "opacity"],
+    (result) => {
+      execute({
+        darkMode: result.darkMode ?? result.darkmode ?? DEFAULTS.darkMode,
+        color: result.color ?? DEFAULTS.color,
+        opacity: result.opacity ?? DEFAULTS.opacity,
+      });
+    },
+  );
 })();
